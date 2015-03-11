@@ -18,9 +18,12 @@ end)
 background = resource.load_image("wc-background.png")
 
 function node.render()
-	gl.clear(0, 0, 0, 1)
+	-- gl.clear(0, 0, 0, 1)
 	util.draw_correct(background, 0, 0, WIDTH, HEIGHT)
 
 	local bar = resource.render_child("bar")
-	bar:draw(0, 0, 1280, 144)
+	bar:draw(0, 0, 1279, 143)
+
+	local sponsors = resource.render_child("sponsors")
+	sponsors:draw(0, 528, 639, 719)
 end
