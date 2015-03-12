@@ -8,41 +8,6 @@ local line
 local fade_start
 local current_talk
 
--- util.auto_loader(_G)
-
-util.data_mapper{
-	["clock/set"] = function(time)
-		base_time = tonumber(time) - sys.now()
-		N.base_time = base_time
-		print("UPDATED TIME", base_time)
-	end;
-}
-
-function check_next_talk()
-	local now = base_time + sys.now()
-	local lineup = {}
-	for idx, talk in ipairs(talks) do
-		if talk.start + 600 > now and talk.room == room then
-			local changed = talk ~= current_talk
-			current_talk = talk
-			if changed then
-				start_anim()
-			end
-			return
-		end
-	end
-end
-
-util.file_watch("schedule.json", function(content)
-	talks = json.decode(content)
-	check_next_talk()
-end)
-
-util.file_watch("room", function(content)
-	room = content:match'^%s*(.*%S)' or ''
-end)
-pp(room)
-
 function cluttered()
 	local all_breaks = '/.-{}()[]<>|,;!? '
 	local breaks = {}
@@ -145,6 +110,40 @@ function start_anim()
 	fade_start = sys.now() + (duration/1.5)
 end
 
+util.data_mapper{
+	["clock/set"] = function(time)
+		base_time = tonumber(time) - sys.now()
+		N.base_time = base_time
+		print("UPDATED TIME", base_time)
+	end;
+}
+
+function check_next_talk()
+	local now = base_time + sys.now()
+	local lineup = {}
+	for idx, talk in ipairs(talks) do
+		if talk.start + 600 > now and talk.room == room then
+			local changed = talk ~= current_talk
+			current_talk = talk
+			if changed then
+				start_anim()
+			end
+			return
+		end
+	end
+end
+
+util.file_watch("schedule.json", function(content)
+	talks = json.decode(content)
+	check_next_talk()
+end)
+
+util.file_watch("room", function(content)
+	room = content:match'^%s*(.*%S)' or ''
+	check_next_talk()
+end)
+pp(room)
+
 check_next_talk()
 
 bold = resource.load_font("OpenSans-Bold.ttf")
@@ -154,7 +153,7 @@ function node.render()
 	gl.clear(0, 0, 0, 0)
 
 	if line then
-		bold:write(75, 180, line.get(), 80, .99, .72, .07, 1)
+		bold:write(75, 150, line.get(), 80, .99, .72, .07, 1)
 	end
 
 	local alpha = 0
@@ -164,7 +163,10 @@ function node.render()
 	end
 
 	if current_talk then
-		regular:write(200, 370, current_talk.nice_start, 60, 1, 1, 1, alpha)
-		bold:write(400, 363, current_talk.speaker, 70, 1, 1, 1, alpha)
+		regular:write(200, 400, current_talk.nice_start, 60, 1, 1, 1, alpha)
+		bold:write(400, 393, current_talk.speaker, 70, 1, 1, 1, alpha)
+		if current_talk.subtitle then
+			bold:write(75, 250, current_talk.subtitle, 80, .99, .72, .07, alpha)
+		end
 	end
 end
