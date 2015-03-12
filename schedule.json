@@ -80,6 +80,16 @@
 		"subtitle": "... Pizza for everyone!"
 	},
 	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "14:00",
+		"nice_stop": "16:00",
+		"speaker": "",
+		"title": "Lightning talks...",
+		"subtitle": ""
+	},
+	{
 		"room": "room2",
 		"start": 0,
 		"stop": 0,
@@ -160,6 +170,16 @@
 		"subtitle": "... Pizza for everyone!"
 	},
 	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "14:00",
+		"nice_stop": "16:00",
+		"speaker": "",
+		"title": "Lightning talks...",
+		"subtitle": ""
+	},
+	{
 		"room": "room3",
 		"start": 0,
 		"stop": 0,
@@ -238,5 +258,15 @@
 		"speaker": "",
 		"title": "Lunch Time!",
 		"subtitle": "... Pizza for everyone!"
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "14:00",
+		"nice_stop": "16:00",
+		"speaker": "",
+		"title": "Lightning talks...",
+		"subtitle": ""
 	}
 ]
