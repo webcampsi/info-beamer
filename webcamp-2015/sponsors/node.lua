@@ -2,7 +2,7 @@ local INTERVAL = 10
 
 local SWITCH_DELAY = 3
 
-gl.setup(960, 288)
+gl.setup(1920, 288)
 
 function is_valid_image(name)
 	return name:match(".*png")
@@ -38,19 +38,24 @@ util.set_interval(INTERVAL, function()
 	fade_start = sys.now() + SWITCH_DELAY
 end)
 
+regular = resource.load_font("OpenSans-Regular.ttf")
+
 function node.render()
-	gl.clear(1, 1, 1, 0.5)
+	gl.clear(0, 0, 0, 1)
+
+	regular:write(200, 150, "WebCamp 2015 is brought to you by: ", 40, 1, 1, 1, 0.7)
+
 	local delta = sys.now() - fade_start
 	if last_image and delta < 0 then
-		util.draw_correct(last_image, 0, 0, 960, 288)
+		util.draw_correct(last_image, 960, 0, 1919, 288)
 	elseif last_image and delta < 1 then
-		util.draw_correct(last_image, 0, 0, 960, 288, 1 - delta)
-		util.draw_correct(current_image, 0, 0, 960, 288, delta)
+		util.draw_correct(last_image, 960, 0, 1919, 288, 1 - delta)
+		util.draw_correct(current_image, 960, 0, 1919, 288, delta)
 	else
 		if last_image then
 			last_image:dispose()
 			last_image = nil
 		end
-		util.draw_correct(current_image, 0, 0, 960, 288)
+		util.draw_correct(current_image, 960, 0, 1919, 288)
 	end
 end

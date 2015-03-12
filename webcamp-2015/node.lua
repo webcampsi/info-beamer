@@ -9,7 +9,7 @@ function node.render()
 	bar:draw(0, 0, 1919, 215)
 
 	local sponsors = resource.render_child("sponsors")
-	sponsors:draw(0, 792, 959, 1079)
+	sponsors:draw(0, 792, 1919, 1079)
 
 	local schedule = resource.render_child("schedule")
 	schedule:draw(0, 216, 1919, 1079)
