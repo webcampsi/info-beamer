@@ -3,8 +3,8 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "22:20",
-		"nice_stop": "22:25",
+		"nice_start": "09:30",
+		"nice_stop": "09:55",
 		"speaker": "Filip Muki Dobranić",
 		"title": "When do programmers work for free?",
 		"subtitle": ""
@@ -13,8 +13,8 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "22:30",
-		"nice_stop": "22:35",
+		"nice_start": "10:00",
+		"nice_stop": "10:25",
 		"speaker": "Taj Pelc",
 		"title": "Not just developers",
 		"subtitle": ""
@@ -23,8 +23,8 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "22:40",
-		"nice_stop": "22:44",
+		"nice_start": "10:30",
+		"nice_stop": "10:55",
 		"speaker": "Žan Anderle",
 		"title": "User Experience at Datafy.it",
 		"subtitle": "mistakes made and lessons learned"
@@ -33,8 +33,8 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "22:50",
-		"nice_stop": "22:55",
+		"nice_start": "11:00",
+		"nice_stop": "11:25",
 		"speaker": "",
 		"title": "Time for some coffee and tea",
 		"subtitle": "... also have a look at our IoT corner"
