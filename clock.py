@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import socket, datetime
 
 now = datetime.datetime.now()
@@ -8,4 +9,4 @@ since_midnight = (
 ).seconds
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.sendto('info-beamer/clock/set:%d' % since_midnight, ('127.0.0.1', 4444))
+sock.sendto('webcamp-2015/schedule/clock/set:%d' % since_midnight, ('127.0.0.1', 4444))
