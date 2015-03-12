@@ -1,12 +1,16 @@
+import time
 import json
-import arrow
 
-schedule = json.loads(open('webcamp-2015/schedule/schedule.json').read())
+f = open('webcamp-2015/schedule/schedule.json', 'wb')
+schedule = json.loads(f.read())
+
 for item in schedule:
-    start = arrow.get(item.get('start'))
-    item['start'] = start.replace(days=+1).format('X')
-    
-    end = arrow.get(item.get('end'))
-    item['end'] = end.replace(days=+1).format('X')
+    start = item.get('nice_start')
+    item['start'] = time.mktime(time.strptime(time.strftime("%d.%m.%Y") + " " + start, "%d.%m.%Y %H:%M"))
 
-print json.dumps(schedule)
+    end = item.get('nice_stop')
+    item['stop'] = time.mktime(time.strptime(time.strftime("%d.%m.%Y") + " " + end, "%d.%m.%Y %H:%M"))
+
+
+f.write(json.dumps(schedule, indent=4))
+f.close()
