@@ -100,7 +100,7 @@ end
 
 
 function start_anim()
-	local duration = 5
+	local duration = 8
 	line = cluttered()
 	line.go(
 		"E.M/B.R-A[C/E]-CO-/N.S/[T/R].A./I-/.N/T/S.",
