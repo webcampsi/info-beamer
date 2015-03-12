@@ -3,8 +3,8 @@
 		"room": "Room 1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "09:30",
-		"nice_stop": "09:55",
+		"nice_start": "9:30",
+		"nice_stop": "9:55",
 		"speaker": "Filip Muki Dobranić",
 		"title": "When do programmers work for free?"
 	},
@@ -57,8 +57,8 @@
 		"room": "Room 2",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "09:30",
-		"nice_stop": "09:55",
+		"nice_start": "9:30",
+		"nice_stop": "9:55",
 		"speaker": "Alja Isaković",
 		"title": "Git your Jekyll on and build a magic static blog or landing page"
 	},
@@ -111,8 +111,8 @@
 		"room": "Room 3",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "09:30",
-		"nice_stop": "09:55",
+		"nice_start": "9:30",
+		"nice_stop": "9:55",
 		"speaker": "Luka Mužinić",
 		"title": "What to do when a client wants to serve 110 million geotargeted banners from a VPS?"
 	},
