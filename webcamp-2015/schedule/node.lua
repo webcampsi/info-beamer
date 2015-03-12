@@ -6,7 +6,7 @@ local base_time = N.base_time or 0
 
 local line
 local fade_start
-local current_talk
+local current_talk = nil
 
 function cluttered()
 	local all_breaks = '/.-{}()[]<>|,;!? '
@@ -100,7 +100,7 @@ end
 
 
 function start_anim()
-	local duration = 15
+	local duration = 5
 	line = cluttered()
 	line.go(
 		"E.M/B.R-A[C/E]-CO-/N.S/[T/R].A./I-/.N/T/S.",
@@ -110,28 +110,34 @@ function start_anim()
 	fade_start = sys.now() + (duration/1.5)
 end
 
+function check_next_talk()
+	local now = base_time + sys.now()
+	local lineup = {}
+	local found = false
+	for idx, talk in ipairs(talks) do
+		if talk.room == room then
+			if talk.start < now and talk.stop > now then
+				local changed = talk ~= current_talk
+				if changed then
+					current_talk = talk
+					start_anim()
+				end
+				return
+			end
+		end
+	end
+	current_talk = nil
+	line = nil
+end
+
 util.data_mapper{
 	["clock/set"] = function(time)
 		base_time = tonumber(time) - sys.now()
 		N.base_time = base_time
 		print("UPDATED TIME", base_time)
+		check_next_talk()
 	end;
 }
-
-function check_next_talk()
-	local now = base_time + sys.now()
-	local lineup = {}
-	for idx, talk in ipairs(talks) do
-		if talk.start + 600 > now and talk.room == room then
-			local changed = talk ~= current_talk
-			current_talk = talk
-			if changed then
-				start_anim()
-			end
-			return
-		end
-	end
-end
 
 util.file_watch("schedule.json", function(content)
 	talks = json.decode(content)
