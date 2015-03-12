@@ -116,7 +116,7 @@ function check_next_talk()
 	local found = false
 	for idx, talk in ipairs(talks) do
 		if talk.room == room then
-			if talk.start < now and talk.stop > now then
+			if talk.start - 301 < now and talk.stop > now then
 				local changed = talk ~= current_talk
 				if changed then
 					current_talk = talk

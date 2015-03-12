@@ -33,6 +33,16 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
+		"nice_start": "11:00",
+		"nice_stop": "11:25",
+		"speaker": "",
+		"title": "Time for some coffee and tea",
+		"subtitle": "... also have a look at our IoT corner"
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
 		"speaker": "Jernej Virag",
@@ -58,6 +68,16 @@
 		"speaker": "Srdjan Vranac",
 		"title": "Ansible, just orchestrate it",
 		"subtitle": ""
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "13:00",
+		"nice_stop": "13:55",
+		"speaker": "",
+		"title": "Lunch Time!",
+		"subtitle": "... Pizza for everyone!"
 	},
 	{
 		"room": "room2",
@@ -93,6 +113,16 @@
 		"room": "room2",
 		"start": 0,
 		"stop": 0,
+		"nice_start": "11:00",
+		"nice_stop": "11:25",
+		"speaker": "",
+		"title": "Time for some coffee and tea",
+		"subtitle": "... also have a look at our IoT corner"
+	},
+	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
 		"speaker": "Mateja Rajter",
@@ -118,6 +148,16 @@
 		"speaker": "Ivan Lučin",
 		"title": "Hybrid web architecture approach with",
 		"subtitle": "Turbolinks"
+	},
+	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "13:00",
+		"nice_stop": "13:55",
+		"speaker": "",
+		"title": "Lunch Time!",
+		"subtitle": "... Pizza for everyone!"
 	},
 	{
 		"room": "room3",
@@ -153,6 +193,16 @@
 		"room": "room3",
 		"start": 0,
 		"stop": 0,
+		"nice_start": "11:00",
+		"nice_stop": "11:25",
+		"speaker": "",
+		"title": "Time for some coffee and tea",
+		"subtitle": "... also have a look at our IoT corner"
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
 		"speaker": "Vladan Mitevski",
@@ -178,5 +228,15 @@
 		"speaker": "Nikola Plejić",
 		"title": "How, When, and Why Clojure?",
 		"subtitle": ""
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "13:00",
+		"nice_stop": "13:55",
+		"speaker": "",
+		"title": "Lunch Time!",
+		"subtitle": "... Pizza for everyone!"
 	}
 ]

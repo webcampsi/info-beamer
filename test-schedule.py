@@ -3,8 +3,8 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "20:25",
-		"nice_stop": "20:27",
+		"nice_start": "20:45",
+		"nice_stop": "20:50",
 		"speaker": "Filip Muki Dobranić",
 		"title": "When do programmers work for free?",
 		"subtitle": ""
@@ -13,8 +13,8 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "20:28",
-		"nice_stop": "20:30",
+		"nice_start": "20:55",
+		"nice_stop": "21:00",
 		"speaker": "Taj Pelc",
 		"title": "Not just developers",
 		"subtitle": ""
@@ -23,8 +23,8 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "20:31",
-		"nice_stop": "20:33",
+		"nice_start": "21:06",
+		"nice_stop": "21:10",
 		"speaker": "Žan Anderle",
 		"title": "User Experience at Datafy.it",
 		"subtitle": "mistakes made and lessons learned"
