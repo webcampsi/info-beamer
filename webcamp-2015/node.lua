@@ -1,4 +1,4 @@
-gl.setup(1280, 720)
+gl.setup(1920, 1080)
 
 local json = require"json"
 local base_time = N.base_time or 0
@@ -22,8 +22,8 @@ function node.render()
 	util.draw_correct(background, 0, 0, WIDTH, HEIGHT)
 
 	local bar = resource.render_child("bar")
-	bar:draw(0, 0, 1279, 143)
+	bar:draw(0, 0, 1919, 215)
 
 	local sponsors = resource.render_child("sponsors")
-	sponsors:draw(0, 528, 639, 719)
+	sponsors:draw(0, 792, 959, 1079)
 end

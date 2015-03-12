@@ -1,10 +1,10 @@
-gl.setup(1280, 144)
+gl.setup(1920, 216)
 
 logo = resource.load_image("wc-logo.png")
 font = resource.load_font("Montserrat-Regular.otf")
 
 function node.render()
 	gl.clear(0, 0, 0, 1)
-	logo:draw(44, 22, 147, 121)
-	font:write(200, 47, "WebCamp 2015", 56, 1, 1, 1, 1)
+	logo:draw(66, 33, 237, 182)
+	font:write(300, 71, "WebCamp 2015", 84, 1, 1, 1, 1)
 end

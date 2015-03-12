@@ -2,7 +2,7 @@ local INTERVAL = 10
 
 local SWITCH_DELAY = 3
 
-gl.setup(640, 192)
+gl.setup(960, 288)
 
 function is_valid_image(name)
 	return name:match(".*png")
@@ -42,15 +42,15 @@ function node.render()
 	gl.clear(1, 1, 1, 0.5)
 	local delta = sys.now() - fade_start
 	if last_image and delta < 0 then
-		util.draw_correct(last_image, 0, 0, 640, 192)
+		util.draw_correct(last_image, 0, 0, 960, 288)
 	elseif last_image and delta < 1 then
-		util.draw_correct(last_image, 0, 0, 640, 192, 1 - delta)
-		util.draw_correct(current_image, 0, 0, 640, 192, delta)
+		util.draw_correct(last_image, 0, 0, 960, 288, 1 - delta)
+		util.draw_correct(current_image, 0, 0, 960, 288, delta)
 	else
 		if last_image then
 			last_image:dispose()
 			last_image = nil
 		end
-		util.draw_correct(current_image, 0, 0, 640, 192)
+		util.draw_correct(current_image, 0, 0, 960, 288)
 	end
 end
