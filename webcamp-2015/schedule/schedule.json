@@ -1,0 +1,11 @@
+[
+    {
+        "room": "Room 1",
+        "start": 1426157952,
+        "stop": 1426287952,
+        "nice_start": "11:00",
+        "nice_stop": "11:25",
+        "speaker": "Goran Blažič",
+        "title": "Constraints based layouting"
+    }
+]
