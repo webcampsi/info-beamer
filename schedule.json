@@ -153,7 +153,7 @@
 		"room": "room2",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "13:00",
+		"nice_start": "12:30",
 		"nice_stop": "12:55",
 		"speaker": "Ivan Lučin",
 		"title": "Hybrid web architecture approach with",
