@@ -10,3 +10,8 @@ if [ "${REMOTE}" != "${LOCAL}" ]; then
 	cat schedule.json | ./fix-schedule.py > webcamp-2015/schedule/_schedule.json
 	mv webcamp-2015/schedule/_schedule.json webcamp-2015/schedule/schedule.json
 fi
+
+if [ ! -f webcamp-2015/schedule/schedule.json ]; then
+	cat schedule.json | ./fix-schedule.py > webcamp-2015/schedule/_schedule.json
+	mv webcamp-2015/schedule/_schedule.json webcamp-2015/schedule/schedule.json
+fi
