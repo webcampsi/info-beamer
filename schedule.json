@@ -93,8 +93,8 @@
 		"room": "room2",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "9:30",
-		"nice_stop": "9:55",
+		"nice_start": "09:30",
+		"nice_stop": "09:55",
 		"speaker": "Alja Isaković",
 		"title": "Git your Jekyll on and build a",
 		"subtitle": "magic static blog or landing page"
