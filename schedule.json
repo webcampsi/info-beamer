@@ -3,8 +3,8 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "09:30",
-		"nice_stop": "09:55",
+		"nice_start": "9:30",
+		"nice_stop": "9:55",
 		"speaker": "Filip Muki Dobranić",
 		"title": "When do programmers work for free?",
 		"subtitle": ""
@@ -183,8 +183,8 @@
 		"room": "room3",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "09:30",
-		"nice_stop": "09:55",
+		"nice_start": "9:30",
+		"nice_stop": "9:55",
 		"speaker": "Luka Mužinić",
 		"title": "What to do when a client wants to serve",
 		"subtitle": "110 million geotargeted banners from a VPS?"
