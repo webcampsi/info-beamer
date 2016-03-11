@@ -1,0 +1,5 @@
+packages=vim,avahi-daemon,sudo,unionfs-fuse,wireless-tools,firmware-ralink,i2c-tools,wpasupplicant,python,libevent-2.0-5,libavformat56,libpng12-0,libfreetype6,libavresample2,git
+bootsize=+1024M
+rootsize=+3072M
+hostname=webcamp
+readonly=true

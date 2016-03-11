@@ -1,0 +1,14 @@
+# Create additional partition
+
+#####
+##### This only works with the original settings in installer-config.txt
+#####
+
+fdisk "${bootdev}" &>/dev/null <<EOF
+n
+p
+3
+8396800
+
+w
+EOF

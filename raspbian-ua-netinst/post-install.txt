@@ -1,0 +1,160 @@
+################################################
+### Various system cleanup / settings
+
+# Remove the tiny sh*t vim
+chroot /rootfs apt-get -y install vim
+chroot /rootfs apt-get -y purge vim-tiny
+
+# Install I2C tools
+chroot /rootfs apt-get -y install i2c-tools
+
+# Add i2c-dev module, and enable i2c
+if ! grep -q i2c-dev /rootfs/etc/modules; then
+	echo i2c-dev >> /rootfs/etc/modules
+fi
+echo "dtparam=i2c_arm=on" >> /rootfs/boot/config.txt
+
+# Comment out sound module, we don't need it
+sed -i 's/^\(snd-bcm2835\)$/# \1/' /rootfs/etc/modules
+
+# Mount (bind) the /dev /sys and /proc FS into the chroot environment
+mount -o bind /dev /rootfs/dev
+mount -o bind /sys /rootfs/sys
+mount -o bind /proc /rootfs/proc
+
+# Let's comment out the LC_* variables from SSHd
+sed -i 's/^\(AcceptEnv.*LC_.*\)$/# \1/' /rootfs/etc/ssh/sshd_config
+
+# Add avahi-daemon and make sure it runs
+chroot /rootfs apt-get -y install avahi-daemon
+sed -i 's/AVAHI_DAEMON_DETECT_LOCAL=1/AVAHI_DAEMON_DETECT_LOCAL=0/' /rootfs/etc/default/avahi-daemon
+
+# Advertise the SSH service (Bonjour)
+echo '<?xml version="1.0" standalone="no"?><!--*-nxml-*--><!DOCTYPE service-group SYSTEM "avahi-service.dtd"><service-group><name replace-wildcards="yes">WebCamp SSH - %h</name><service><type>_ssh._tcp</type><port>22</port></service></service-group>' > /rootfs/etc/avahi/services/ssh.service
+
+# Set my actual timezone
+TIMEZONE="Europe/Ljubljana"
+echo $TIMEZONE > /rootfs/etc/timezone
+chroot /rootfs dpkg-reconfigure -f noninteractive tzdata
+
+# Disable root login and password
+sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /rootfs/etc/ssh/sshd_config
+chroot /rootfs passwd -d root
+
+# We want graphics memory
+echo "gpu_mem=256" >> /rootfs/boot/config.txt
+
+# We want to be able to change hostname, hosts and mtab
+rm /rootfs/etc/hostname
+ln -s /tmp/hostname /rootfs/etc/hostname
+rm /rootfs/etc/hosts
+ln -s /tmp/hosts /rootfs/etc/hosts
+rm /rootfs/etc/mtab
+ln -s /proc/self/mounts /rootfs/etc/mtab
+
+# Add the set-hostname script
+cp /bootfs/set-hostname /rootfs/usr/local/bin/set-hostname
+chmod +x /rootfs/usr/local/bin/set-hostname
+
+# Set up systemd service
+cp /bootfs/set-hostname.service /rootfs/etc/systemd/system/set-hostname.service
+chmod -x /rootfs/etc/systemd/system/set-hostname.service
+
+# Enable the hostname setter
+chroot /rootfs /bin/systemctl enable set-hostname.service
+
+# Create a link to the wlan0 settings file
+ln -s /boot/config/wlan-config.txt /rootfs/etc/network/interfaces.d/wlan0
+
+# Make the system boot faster when no network is available
+sed -i 's/^auto eth0/allow-hotplug eth0/' /rootfs/etc/network/interfaces
+
+# Make sure we have a working DNS resolver
+echo "nameserver 8.8.8.8" > /rootfs/etc/resolv.conf
+echo "nameserver 8.8.4.4" >> /rootfs/etc/resolv.conf
+
+# Remove not needed packages
+chroot /rootfs apt-get -y purge fake-hwclock
+
+# Enable the HW Clock
+sed -i "s/exit 0//" /rootfs/etc/rc.local
+cat >> /rootfs/etc/rc.local << EOF
+i2cset -y $i 0x6f 0x08 0x47
+modprobe i2c:mcp7941x
+echo mcp7941x 0x6f > /sys/class/i2c-dev/i2c-1/device/new_device
+hwclock -s
+
+exit 0
+EOF
+
+# Fix the "action 17" issue in systemd (rsyslog related)
+# Just remote (comment out would be better, I guess) the last 4 lines
+cp /rootfs/etc/rsyslog.conf /rootfs/etc/rsyslog.conf.orig
+head -n -4 /rootfs/etc/rsyslog.conf.orig > /rootfs/etc/rsyslog.conf
+
+# Packages should've been installed by installer-config.txt, but still...
+chroot /rootfs apt-get -y install wireless-tools
+chroot /rootfs apt-get -y install firmware-ralink
+chroot /rootfs apt-get -y install wpasupplicant
+chroot /rootfs apt-get -y install python
+chroot /rootfs apt-get -y install git
+chroot /rootfs apt-get -y install libevent-2.0-5 libavformat56 libpng12-0 libfreetype6 libavresample2
+
+
+
+################################################
+### Add sudo support and create the users
+chroot /rootfs apt-get -y install sudo
+# First, create my user... sudo enabled
+chroot /rootfs useradd -s /bin/bash -p saNuxuQzDicxU -m -G users,sudo,video goranb
+mkdir -m 700 /rootfs/home/goranb/.ssh
+echo "ForwardAgent yes" > /rootfs/home/goranb/.ssh/config
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEApQbkQQsMzWNgIkiadNP4WaNR8blQ9noMk3eywsj7+ytXouavywbsGrZu+sKWEBthgxPtTdzvCnfbsJR0EnJQ1Lb9pSKBoFWziyOk+wU29WDeMdJvWpsELwttWD5YQ61glzeDOrjCAFdYRnebYjaYhFaiQrStXXPAj9GH2LVKybj7ukyO6S0o5FhCtsK0sW0OvY0nNZaTA0nxb1f0buY1z4cIfsFtSLFl1zM1DmK0pysMtuH/b1eDkNKauAROmbXgjeFF1fhmHoiSLKronjFgbHf3tvq3K0Bre5UrVB8jngP6yTIP0uuUYjuaBE4n1t3z+/KwHPDzv3XeEaOmAUDZ2Q== goranche@me.com" > /rootfs/home/goranb/.ssh/authorized_keys
+chroot /rootfs chown -R goranb:goranb /home/goranb/.ssh
+
+# Add a webcamp user to run the stuff as
+chroot /rootfs useradd -s /bin/bash -p sol23.0GjF3UI -m -G users,video webcamp
+
+
+
+################################################
+### Install Info-Beamer
+cd /rootfs/home/webcamp
+# Download the package
+tar xvf /bootfs/info-beamer-pi-0.9.4-beta.ce8d97-jessie.tar.gz
+chroot /rootfs chown -R webcamp:webcamp /home/webcamp/info-beamer-pi
+rm /bootfs/info-beamer-pi-0.9.4-beta.ce8d97-jessie.tar.gz
+
+
+
+################################################
+### Make the system read-only
+chroot /rootfs apt-get -y install unionfs-fuse
+cp /bootfs/mount_unionfs /rootfs/usr/local/bin/mount_unionfs
+chmod +x /rootfs/usr/local/bin/mount_unionfs
+if [ "${readonly}" = "true" ]; then
+	sed -i 's/^\/dev\/mmcblk\S*\s\+\/[a-z]*\s\+\S*\s\+/&ro,/' /rootfs/etc/fstab
+
+	echo "mount_unionfs /var fuse defaults 0 0" >> /rootfs/etc/fstab
+	mv /rootfs/var /rootfs/var_orig
+	mkdir /rootfs/var /rootfs/var_rw
+
+    # bind mount /rootfs/var, so the rest of the installation goes as planned
+    mount -o bind /rootfs/var_orig /rootfs/var
+fi
+
+
+
+################################################
+### Add the 3. partition to /srv
+# Don't forget to create the 3. partition after boot
+echo "${bootdev}p3 /srv ext4 defaults,noatime 0 2" >> /rootfs/etc/fstab
+
+
+
+################################################
+### Cleanup
+# unMount (bind) the /dev /sys and /proc FS from the chroot environment
+umount /rootfs/dev
+umount /rootfs/sys
+umount /rootfs/proc

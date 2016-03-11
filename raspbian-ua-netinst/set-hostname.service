@@ -1,0 +1,11 @@
+[Unit]
+Description=Set hostname
+Before=avahi-daemon.service
+After=bootled.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/set-hostname
+
+[Install]
+WantedBy=multi-user.target

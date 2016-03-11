@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+	echo "This script must be run as root" 1>&2
+	exit 1
+fi
+
+hostname=$(/sbin/ifconfig | grep eth.*HWaddr | sed 's/^.*HWaddr//' | tr -d ' :' | sed 's/^b827eb//')
+
+hostname "${hostname}"
+
+echo "${hostname}" > /tmp/hostname
+
+echo -e "127.0.0.1\tlocalhost" > /tmp/hosts
+echo -e "127.0.1.1\t${hostname}" >> /tmp/hosts
