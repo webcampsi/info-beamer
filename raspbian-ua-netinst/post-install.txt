@@ -90,7 +90,7 @@ mkfs.ext4 "${bootdev}p3" || fail
 # Mount the new filesystem, clone the git repo, and umount it
 mkdir -p /rootfs/srv
 mount "${bootdev}p3" /rootfs/srv
-chroot /rootfs "cd /srv; git clone https://github.com/webcampsi/info-beamer.git"
+chroot /rootfs git clone https://github.com/webcampsi/info-beamer.git /srv/info-beamer
 umount /rootfs/srv
 
 # Create a link to the wlan0 settings file
