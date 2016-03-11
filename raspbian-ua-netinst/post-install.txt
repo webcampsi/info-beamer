@@ -63,6 +63,10 @@ chmod -x /rootfs/etc/systemd/system/set-hostname.service
 # Enable the hostname setter
 chroot /rootfs /bin/systemctl enable set-hostname.service
 
+echo "=== Creating filesystem"
+mkfs.ext4 "${bootdev}p3" || fail
+# Adding to fstab later on, so it doesn't become readonly
+
 # Create a link to the wlan0 settings file
 ln -s /boot/config/wlan-config.txt /rootfs/etc/network/interfaces.d/wlan0
 
@@ -119,11 +123,9 @@ chroot /rootfs useradd -s /bin/bash -p sol23.0GjF3UI -m -G users,video webcamp
 
 ################################################
 ### Install Info-Beamer
-cd /rootfs/home/webcamp
-# Download the package
-tar xvf /bootfs/info-beamer-pi-0.9.4-beta.ce8d97-jessie.tar.gz
+chroot /rootfs /bin/tar xvf /boot/info-beamer-pi-0.9.4-beta.ce8d97-jessie.tar.gz -C /home/webcamp
 chroot /rootfs chown -R webcamp:webcamp /home/webcamp/info-beamer-pi
-rm /bootfs/info-beamer-pi-0.9.4-beta.ce8d97-jessie.tar.gz
+rm /rootfs/boot/info-beamer-pi-0.9.4-beta.ce8d97-jessie.tar.gz
 
 
 
