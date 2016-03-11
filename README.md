@@ -3,6 +3,10 @@ the info-beamer nodes (and related scripts/data) used at the webcamp event
 
 # Running
 
+extract info-beamer-pi-0.9.4-beta.ce8d97-jessie.tar.gz into /home/webcamp/info-beamer-pi
+
+clone the info-beamer repository into /srv/info-beamer
+
 add a crontab entry like this:
 ```
 @reboot /path/to/run-beamer.sh
