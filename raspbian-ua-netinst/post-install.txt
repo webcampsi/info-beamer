@@ -56,16 +56,42 @@ ln -s /proc/self/mounts /rootfs/etc/mtab
 cp /bootfs/set-hostname /rootfs/usr/local/bin/set-hostname
 chmod +x /rootfs/usr/local/bin/set-hostname
 
-# Set up systemd service
+# Add the prepare-beamer script
+cp /bootfs/prepare-beamer /rootfs/usr/local/bin/prepare-beamer
+chmod +x /rootfs/usr/local/bin/prepare-beamer
+
+# Set up systemd services
 cp /bootfs/set-hostname.service /rootfs/etc/systemd/system/set-hostname.service
 chmod -x /rootfs/etc/systemd/system/set-hostname.service
+cp /bootfs/prepare-beamer.service /rootfs/etc/systemd/system/prepare-beamer.service
+chmod -x /rootfs/etc/systemd/system/prepare-beamer.service
+cp /bootfs/info-beamer.service /rootfs/etc/systemd/system/info-beamer.service
+chmod -x /rootfs/etc/systemd/system/info-beamer.service
+cp /bootfs/beamer-clock.service /rootfs/etc/systemd/system/beamer-clock.service
+chmod -x /rootfs/etc/systemd/system/beamer-clock.service
+cp /bootfs/beamer-clock.timer /rootfs/etc/systemd/system/beamer-clock.timer
+chmod -x /rootfs/etc/systemd/system/beamer-clock.timer
+cp /bootfs/beamer-update.service /rootfs/etc/systemd/system/beamer-update.service
+chmod -x /rootfs/etc/systemd/system/beamer-update.service
+cp /bootfs/beamer-update.timer /rootfs/etc/systemd/system/beamer-update.timer
+chmod -x /rootfs/etc/systemd/system/beamer-update.timer
 
 # Enable the hostname setter
 chroot /rootfs /bin/systemctl enable set-hostname.service
+chroot /rootfs /bin/systemctl enable prepare-beamer.service
+chroot /rootfs /bin/systemctl enable info-beamer.service
+chroot /rootfs /bin/systemctl enable beamer-clock.timer
+chroot /rootfs /bin/systemctl enable beamer-update.timer
 
 echo "=== Creating filesystem"
 mkfs.ext4 "${bootdev}p3" || fail
 # Adding to fstab later on, so it doesn't become readonly
+
+# Mount the new filesystem, clone the git repo, and umount it
+mkdir -p /rootfs/srv
+mount "${bootdev}p3" /rootfs/srv
+chroot /rootfs "cd /srv; git clone https://github.com/webcampsi/info-beamer.git"
+umount /rootfs/srv
 
 # Create a link to the wlan0 settings file
 ln -s /boot/config/wlan-config.txt /rootfs/etc/network/interfaces.d/wlan0

@@ -1,0 +1,10 @@
+[Unit]
+Description=InfoBeamer Preparation
+Before=info-beamer.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/prepare-beamer
+
+[Install]
+WantedBy=multi-user.target

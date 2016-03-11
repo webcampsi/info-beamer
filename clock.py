@@ -9,4 +9,4 @@ since_midnight = (
 ).seconds
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.sendto('webcamp-2015/schedule/clock/set:%d' % since_midnight, ('127.0.0.1', 4444))
+sock.sendto('webcamp-2016/schedule/clock/set:%d' % since_midnight, ('127.0.0.1', 4444))

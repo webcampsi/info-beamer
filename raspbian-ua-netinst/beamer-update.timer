@@ -1,0 +1,10 @@
+[Unit]
+Description=InfoBeamer Update Timer
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2min
+Unit=beamer-update.service
+
+[Install]
+WantedBy=basic.target

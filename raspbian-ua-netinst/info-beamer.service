@@ -1,0 +1,12 @@
+[Unit]
+Description=Start info-beamer
+After=syslog.target
+ConditionPathExists=!/boot/config/no-run
+
+[Service]
+ExecStart=/home/webcamp/info-beamer-pi/info-beamer /srv/info-beamer/webcamp-2016
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

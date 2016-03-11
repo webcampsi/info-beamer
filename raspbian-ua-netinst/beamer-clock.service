@@ -1,0 +1,9 @@
+[Unit]
+Description=InfoBeamer Clock
+
+[Service]
+Type=oneshot
+ExecStart=/srv/info-beamer/clock.py
+
+[Install]
+WantedBy=multi-user.target

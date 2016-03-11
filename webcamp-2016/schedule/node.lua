@@ -163,7 +163,7 @@ function node.render()
 	gl.clear(0, 0, 0, 0)
 
 	if line then
-		bold:write(75, 150, line.get(), 80, .99, .72, .07, 1)
+		bold:write(75, 150, line.get(), 80, 0, 0, 0, 1)
 	end
 
 	local alpha = 0
@@ -173,10 +173,10 @@ function node.render()
 	end
 
 	if current_talk then
-		regular:write(200, 400, current_talk.nice_start, 60, 1, 1, 1, alpha)
-		bold:write(400, 393, current_talk.speaker, 70, 1, 1, 1, alpha)
+		regular:write(200, 400, current_talk.nice_start, 60, 0, 0, 0, alpha)
+		bold:write(400, 393, current_talk.speaker, 70, 0, 0, 0, alpha)
 		if current_talk.subtitle then
-			bold:write(75, 250, current_talk.subtitle, 80, .99, .72, .07, alpha)
+			bold:write(75, 250, current_talk.subtitle, 80, 0, 0, 0, alpha)
 		end
 	end
 end

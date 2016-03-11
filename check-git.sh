@@ -2,7 +2,7 @@
 
 cd /srv/info-beamer
 
-REMOTE=$(git ls-remote git@github.com:webcampsi/info-beamer.git master | cut -f1)
+REMOTE=$(git ls-remote https://github.com/webcampsi/info-beamer.git master | cut -f1)
 LOCAL=$(git rev-parse origin/master)
 
 if [ "${REMOTE}" != "${LOCAL}" ]; then

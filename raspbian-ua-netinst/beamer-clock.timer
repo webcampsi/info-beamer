@@ -1,0 +1,10 @@
+[Unit]
+Description=InfoBeamer Clock Timer
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=beamer-clock.service
+
+[Install]
+WantedBy=basic.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=InfoBeamer Update
+
+[Service]
+Type=oneshot
+ExecStart=/srv/info-beamer/check-git.sh
+
+[Install]
+WantedBy=multi-user.target
