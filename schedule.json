@@ -5,9 +5,9 @@
 		"stop": 0,
 		"nice_start": "9:30",
 		"nice_stop": "9:55",
-		"speaker": "Anze Žnidaršič",
-		"title": "Using JavaScript ES2015",
-		"subtitle": "(ES6), ES2016, ES* in production"
+		"speaker": "Gregor Lah",
+		"title": "Adopting event based microservices architecture",
+		"subtitle": ""
 	},
 	{
 		"room": "room1",
@@ -15,8 +15,8 @@
 		"stop": 0,
 		"nice_start": "10:00",
 		"nice_stop": "10:25",
-		"speaker": "Ivan Lučin",
-		"title": "Cheating on Rails with Ember",
+		"speaker": "Gabrijela Hladnik",
+		"title": "Testing as a valid career choice",
 		"subtitle": ""
 	},
 	{
@@ -25,8 +25,8 @@
 		"stop": 0,
 		"nice_start": "10:30",
 		"nice_stop": "10:55",
-		"speaker": "Slobodan Stojanović",
-		"title": "Offline web apps",
+		"speaker": "Simon Belak",
+		"title": "Escape from JS",
 		"subtitle": ""
 	},
 	{
@@ -36,8 +36,8 @@
 		"nice_start": "11:00",
 		"nice_stop": "11:25",
 		"speaker": "",
-		"title": "Time for some coffee and tea",
-		"subtitle": "... also have a look at our IoT corner"
+		"title": "Break",
+		"subtitle": "Have a break, grab a mug, meet a friend."
 	},
 	{
 		"room": "room1",
@@ -45,9 +45,9 @@
 		"stop": 0,
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
-		"speaker": "Mark Nadal",
-		"title": "The Front-end Back-end without DevOps",
-		"subtitle": ""
+		"speaker": "Svetlana Sapelova",
+		"title": "ES6-7 generators",
+		"subtitle": "for better or for worse"
 	},
 	{
 		"room": "room1",
@@ -55,8 +55,8 @@
 		"stop": 0,
 		"nice_start": "12:00",
 		"nice_stop": "12:25",
-		"speaker": "Andrei Zvonimir Crnković",
-		"title": "Go reactive or go home",
+		"speaker": "Duško Trifković",
+		"title": "How to grow your team with your code",
 		"subtitle": ""
 	},
 	{
@@ -65,9 +65,9 @@
 		"stop": 0,
 		"nice_start": "12:30",
 		"nice_stop": "12:55",
-		"speaker": "Andraz Bajt",
-		"title": "Purely functional frontend",
-		"subtitle": ""
+		"speaker": "Ivan Ružević",
+		"title": "Frontend development",
+		"subtitle": "how to start and what to learn"
 	},
 	{
 		"room": "room1",
@@ -76,27 +76,87 @@
 		"nice_start": "13:00",
 		"nice_stop": "13:55",
 		"speaker": "",
-		"title": "Lunch Time!",
-		"subtitle": "... Pizza for everyone!"
+		"title": "Lunch",
+		"subtitle": "Grab some food, stretch, meet new people"
 	},
 	{
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
 		"nice_start": "14:00",
-		"nice_stop": "16:00",
-		"speaker": "",
-		"title": "Lightning talks...",
+		"nice_stop": "14:25",
+		"speaker": "Tomislav Slovenec",
+		"title": "CSS features coming to a browser near you",
 		"subtitle": ""
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "14:30",
+		"nice_stop": "14:55",
+		"speaker": "Janez Čadež",
+		"title": "Rapid mobile app prototyping with Ionic",
+		"subtitle": ""
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "15:00",
+		"nice_stop": "15:25",
+		"speaker": "",
+		"title": "Break",
+		"subtitle": "Re-fill the mug, go to loo, stretch"
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "15:30",
+		"nice_stop": "15:55",
+		"speaker": "Jošt Novljan",
+		"title": "The black art of code reviews",
+		"subtitle": ""
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "16:00",
+		"nice_stop": "16:25",
+		"speaker": "Maša Crnkovič",
+		"title": "Conversion optimization 101",
+		"subtitle": ""
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "16:30",
+		"nice_stop": "16:55",
+		"speaker": "Milan Gabor",
+		"title": "Security - forgotten chapter",
+		"subtitle": ""
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "17:00",
+		"nice_stop": "17:55",
+		"speaker": "",
+		"title": "Keynote & closing",
+		"subtitle": "Goodbye and thanks for all the fish"
 	},
 	{
 		"room": "room2",
 		"start": 0,
 		"stop": 0,
-		"nice_start": "09:30",
-		"nice_stop": "09:55",
-		"speaker": "Bozhidar Batsov",
-		"title": "The Burden of Project Stewardship",
+		"nice_start": "9:30",
+		"nice_stop": "9:55",
+		"speaker": "Sandra Valantič",
+		"title": "How not to get eaten by bugs?",
 		"subtitle": ""
 	},
 	{
@@ -105,8 +165,8 @@
 		"stop": 0,
 		"nice_start": "10:00",
 		"nice_stop": "10:25",
-		"speaker": "Primoz Cigler",
-		"title": "Beauties and challenges of remote work",
+		"speaker": "Jernej Virag",
+		"title": "Building my own IoT sensors with web interface",
 		"subtitle": ""
 	},
 	{
@@ -115,8 +175,8 @@
 		"stop": 0,
 		"nice_start": "10:30",
 		"nice_stop": "10:55",
-		"speaker": "Rok Carl",
-		"title": "Becoming DevOps, a developer's tale",
+		"speaker": "Krešimir Antolić",
+		"title": "Typing JavaScript",
 		"subtitle": ""
 	},
 	{
@@ -126,8 +186,8 @@
 		"nice_start": "11:00",
 		"nice_stop": "11:25",
 		"speaker": "",
-		"title": "Time for some coffee and tea",
-		"subtitle": "... also have a look at our IoT corner"
+		"title": "Break",
+		"subtitle": "Have a break, grab a mug, meet a friend."
 	},
 	{
 		"room": "room2",
@@ -135,8 +195,8 @@
 		"stop": 0,
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
-		"speaker": "Luka Muzinic",
-		"title": "Dashboards for devops and other web folks",
+		"speaker": "Philipp Krenn",
+		"title": "Awesome Logging Infrastructure Using The Elastic Stack",
 		"subtitle": ""
 	},
 	{
@@ -145,8 +205,8 @@
 		"stop": 0,
 		"nice_start": "12:00",
 		"nice_stop": "12:25",
-		"speaker": "Marko Kazic",
-		"title": "Where we fail at teaching programming",
+		"speaker": "Ines Panker",
+		"title": "Case Study: Use of JSONB in PostgreSQL",
 		"subtitle": ""
 	},
 	{
@@ -155,8 +215,8 @@
 		"stop": 0,
 		"nice_start": "12:30",
 		"nice_stop": "12:55",
-		"speaker": "Luka Kladaric",
-		"title": "The importance of being a noob",
+		"speaker": "Radan Skorić",
+		"title": "Battling complexity",
 		"subtitle": ""
 	},
 	{
@@ -166,18 +226,68 @@
 		"nice_start": "13:00",
 		"nice_stop": "13:55",
 		"speaker": "",
-		"title": "Lunch Time!",
-		"subtitle": "... Pizza for everyone!"
+		"title": "Lunch",
+		"subtitle": "Grab some food, stretch, meet new people"
 	},
 	{
 		"room": "room2",
 		"start": 0,
 		"stop": 0,
 		"nice_start": "14:00",
-		"nice_stop": "16:00",
-		"speaker": "",
-		"title": "Lightning talks...",
+		"nice_stop": "14:25",
+		"speaker": "Marijan Šuflaj",
+		"title": "Xdebug - It's easy, Mkay",
 		"subtitle": ""
+	},
+	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "14:30",
+		"nice_stop": "14:55",
+		"speaker": "Marija Vavpotič",
+		"title": "Google Play is not the only one",
+		"subtitle": ""
+	},
+	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "15:00",
+		"nice_stop": "15:25",
+		"speaker": "",
+		"title": "Break",
+		"subtitle": "Re-fill the mug, go to loo, stretch"
+	},
+	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "15:30",
+		"nice_stop": "15:55",
+		"speaker": "Peter Lamut",
+		"title": "Salvaging a project heavily burdened by technical debt",
+		"subtitle": ""
+	},
+	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "16:00",
+		"nice_stop": "16:25",
+		"speaker": "Gregor Spagnolo",
+		"title": ".NET core & microservices",
+		"subtitle": "the good, the bad, the ugly"
+	},
+	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "17:00",
+		"nice_stop": "17:55",
+		"speaker": "in Room 1",
+		"title": "Keynote & closing",
+		"subtitle": "Goodbye and thanks for all the fish"
 	},
 	{
 		"room": "room3",
@@ -185,9 +295,9 @@
 		"stop": 0,
 		"nice_start": "9:30",
 		"nice_stop": "9:55",
-		"speaker": "Srdjan Vranac",
-		"title": "Roll out",
-		"subtitle": "Code deployments that do not suck"
+		"speaker": "Gregor Cuzak",
+		"title": "Depression, my experience",
+		"subtitle": ""
 	},
 	{
 		"room": "room3",
@@ -195,8 +305,8 @@
 		"stop": 0,
 		"nice_start": "10:00",
 		"nice_stop": "10:25",
-		"speaker": "Josip Maslać",
-		"title": "Scaling just a bit",
+		"speaker": "Romina Kavčič",
+		"title": "Self-friendly vs User-friendly",
 		"subtitle": ""
 	},
 	{
@@ -205,9 +315,9 @@
 		"stop": 0,
 		"nice_start": "10:30",
 		"nice_stop": "10:55",
-		"speaker": "Aleksandar Stevanovic",
-		"title": "Change is hard",
-		"subtitle": "make your life easy by making code simple"
+		"speaker": "Uroš Trebec",
+		"title": "A day in a life of a startup CTO",
+		"subtitle": ""
 	},
 	{
 		"room": "room3",
@@ -216,8 +326,8 @@
 		"nice_start": "11:00",
 		"nice_stop": "11:25",
 		"speaker": "",
-		"title": "Time for some coffee and tea",
-		"subtitle": "... also have a look at our IoT corner"
+		"title": "Break",
+		"subtitle": "Have a break, grab a mug, meet a friend."
 	},
 	{
 		"room": "room3",
@@ -225,9 +335,9 @@
 		"stop": 0,
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
-		"speaker": "Nebojsa Stricevic",
-		"title": "Supercharged Feature Flags",
-		"subtitle": ""
+		"speaker": "Heidi Pungartnik",
+		"title": "Beat overwhelm, strengthen focus",
+		"subtitle": "become happier in 10 minutes per day"
 	},
 	{
 		"room": "room3",
@@ -235,8 +345,8 @@
 		"stop": 0,
 		"nice_start": "12:00",
 		"nice_stop": "12:25",
-		"speaker": "Robert Šorn",
-		"title": "Domain Driven Design in a nutshell",
+		"speaker": "Dušan Stanković",
+		"title": "Fight for digital privacy",
 		"subtitle": ""
 	},
 	{
@@ -245,8 +355,8 @@
 		"stop": 0,
 		"nice_start": "12:30",
 		"nice_stop": "12:55",
-		"speaker": "Simon Belak",
-		"title": "The Log, the View and the Stream",
+		"speaker": "Ivana Novak",
+		"title": "Learning to code with online courses",
 		"subtitle": ""
 	},
 	{
@@ -256,17 +366,67 @@
 		"nice_start": "13:00",
 		"nice_stop": "13:55",
 		"speaker": "",
-		"title": "Lunch Time!",
-		"subtitle": "... Pizza for everyone!"
+		"title": "Lunch",
+		"subtitle": "Grab some food, stretch, meet new people"
 	},
 	{
 		"room": "room3",
 		"start": 0,
 		"stop": 0,
 		"nice_start": "14:00",
-		"nice_stop": "16:00",
-		"speaker": "",
-		"title": "Lightning talks...",
+		"nice_stop": "14:25",
+		"speaker": "Silvana Žorž",
+		"title": "Mindfully dancing with chaos",
 		"subtitle": ""
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "14:30",
+		"nice_stop": "14:55",
+		"speaker": "Rolando Benjamin Vaz Ferreira",
+		"title": "Unleashing Potential While Relaxing The Mind",
+		"subtitle": ""
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "15:00",
+		"nice_stop": "15:25",
+		"speaker": "",
+		"title": "Break",
+		"subtitle": "Re-fill the mug, go to loo, stretch"
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "15:30",
+		"nice_stop": "15:55",
+		"speaker": "Tin Peressutti",
+		"title": "Technological problems and solutions in modern yarn spinning plant",
+		"subtitle": ""
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "16:00",
+		"nice_stop": "16:25",
+		"speaker": "Katja Guček",
+		"title": "Motives for Participation in FLOSS Communities",
+		"subtitle": ""
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "17:00",
+		"nice_stop": "17:55",
+		"speaker": "in Room 1",
+		"title": "Keynote & closing",
+		"subtitle": "Goodbye and thanks for all the fish"
 	}
 ]
