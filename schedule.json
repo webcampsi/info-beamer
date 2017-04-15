@@ -1,4 +1,4 @@
- [
+[
 	{
 		"room": "room1",
 		"start": 0,
@@ -46,8 +46,8 @@
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
 		"speaker": "Svetlana Sapelova",
-		"title": "ES6-7 generators",
-		"subtitle": "for better or for worse"
+		"title": "ES6-7 generators: for better or for worse",
+		"subtitle": ""
 	},
 	{
 		"room": "room1",
@@ -166,8 +166,8 @@
 		"nice_start": "10:00",
 		"nice_stop": "10:25",
 		"speaker": "Jernej Virag",
-		"title": "Building my own IoT sensors with web",
-		"subtitle": "interface"
+		"title": "Building my own IoT sensors with",
+		"subtitle": "web interface"
 	},
 	{
 		"room": "room2",
@@ -336,7 +336,7 @@
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
 		"speaker": "Heidi Pungartnik",
-		"title": "Beat overwhelm, strengthen focus",
+		"title": "Beat overwhelm, strengthen focus,",
 		"subtitle": "become happier in 10 minutes per day"
 	},
 	{
@@ -386,8 +386,8 @@
 		"nice_start": "14:30",
 		"nice_stop": "14:55",
 		"speaker": "Rolando Benjamin Vaz Ferreira",
-		"title": "Unleashing Potential While Relaxing The Mind",
-		"subtitle": ""
+		"title": "Unleashing Potential While",
+		"subtitle": "Relaxing The Mind"
 	},
 	{
 		"room": "room3",
@@ -416,8 +416,8 @@
 		"nice_start": "16:00",
 		"nice_stop": "16:25",
 		"speaker": "Katja Guček",
-		"title": "Motives for Participation in FLOSS Communities",
-		"subtitle": ""
+		"title": "Motives for Participation in",
+		"subtitle": "FLOSS Communities"
 	},
 	{
 		"room": "room3",
