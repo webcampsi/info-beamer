@@ -4,7 +4,7 @@ After=syslog.target
 ConditionPathExists=!/boot/config/no-run
 
 [Service]
-ExecStart=/home/webcamp/info-beamer-pi/info-beamer /srv/info-beamer/webcamp-2016
+ExecStart=/home/webcamp/info-beamer-pi/info-beamer /srv/info-beamer/webcamp-2017
 Restart=always
 RestartSec=10
 
