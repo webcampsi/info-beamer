@@ -43,7 +43,7 @@ regular = resource.load_font("OpenSans-Regular.ttf")
 function node.render()
 	gl.clear(1, 1, 1, 0.5)
 
-	regular:write(200, 150, "WebCamp 2016 is brought to you by: ", 40, 0, 0, 0, 0.6)
+	regular:write(200, 150, "WebCamp 2017 is brought to you by: ", 40, 0, 0, 0, 0.6)
 
 	local delta = sys.now() - fade_start
 	if last_image and delta < 0 then
