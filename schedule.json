@@ -6,8 +6,8 @@
 		"nice_start": "9:30",
 		"nice_stop": "9:55",
 		"speaker": "Gregor Lah",
-		"title": "Adopting event based microservices architecture",
-		"subtitle": ""
+		"title": "Adopting event based microservices",
+		"subtitle": "architecture"
 	},
 	{
 		"room": "room1",
@@ -166,8 +166,8 @@
 		"nice_start": "10:00",
 		"nice_stop": "10:25",
 		"speaker": "Jernej Virag",
-		"title": "Building my own IoT sensors with web interface",
-		"subtitle": ""
+		"title": "Building my own IoT sensors with web",
+		"subtitle": "interface"
 	},
 	{
 		"room": "room2",
@@ -196,8 +196,8 @@
 		"nice_start": "11:30",
 		"nice_stop": "11:55",
 		"speaker": "Philipp Krenn",
-		"title": "Awesome Logging Infrastructure Using The Elastic Stack",
-		"subtitle": ""
+		"title": "Awesome Logging Infrastructure Using",
+		"subtitle": "The Elastic Stack"
 	},
 	{
 		"room": "room2",
@@ -266,8 +266,8 @@
 		"nice_start": "15:30",
 		"nice_stop": "15:55",
 		"speaker": "Peter Lamut",
-		"title": "Salvaging a project heavily burdened by technical debt",
-		"subtitle": ""
+		"title": "Salvaging a project heavily burdened",
+		"subtitle": "by technical debt"
 	},
 	{
 		"room": "room2",
@@ -406,8 +406,8 @@
 		"nice_start": "15:30",
 		"nice_stop": "15:55",
 		"speaker": "Tin Peressutti",
-		"title": "Technological problems and solutions in modern yarn spinning plant",
-		"subtitle": ""
+		"title": "Technological problems and solutions",
+		"subtitle": "in modern yarn spinning plant"
 	},
 	{
 		"room": "room3",
