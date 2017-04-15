@@ -1,4 +1,5 @@
 allow-hotplug wlan0
 iface wlan0 inet dhcp
-    wpa-ssid "goranche"
-    wpa-psk f1b28c5e48e0b41509e60346d39e80aaa8f2e265574a73a8680b8fb99e4f3a57
+    wpa-ssid ""
+	# use https://www.wireshark.org/tools/wpa-psk.html to generate the psk
+    wpa-psk ""
