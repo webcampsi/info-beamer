@@ -3,6 +3,16 @@
 		"room": "room1",
 		"start": 0,
 		"stop": 0,
+		"nice_start": "9:00",
+		"nice_stop": "9:25",
+		"speaker": "",
+		"title": "Welcome talk",
+		"subtitle": "Let's all meet and greet."
+	},
+	{
+		"room": "room1",
+		"start": 0,
+		"stop": 0,
 		"nice_start": "9:30",
 		"nice_stop": "9:55",
 		"speaker": "Gregor Lah",
@@ -153,6 +163,16 @@
 		"room": "room2",
 		"start": 0,
 		"stop": 0,
+		"nice_start": "9:00",
+		"nice_stop": "9:25",
+		"speaker": "",
+		"title": "Welcome talk",
+		"subtitle": "Let's all meet and greet."
+	},
+	{
+		"room": "room2",
+		"start": 0,
+		"stop": 0,
 		"nice_start": "9:30",
 		"nice_stop": "9:55",
 		"speaker": "Sandra Valantič",
@@ -293,6 +313,16 @@
 		"room": "room3",
 		"start": 0,
 		"stop": 0,
+		"nice_start": "9:00",
+		"nice_stop": "9:25",
+		"speaker": "",
+		"title": "Welcome talk",
+		"subtitle": "Let's all meet and greet."
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
 		"nice_start": "9:30",
 		"nice_stop": "9:55",
 		"speaker": "Gregor Cuzak",
@@ -418,6 +448,16 @@
 		"speaker": "Katja Guček",
 		"title": "Motives for Participation in",
 		"subtitle": "FLOSS Communities"
+	},
+	{
+		"room": "room3",
+		"start": 0,
+		"stop": 0,
+		"nice_start": "17:00",
+		"nice_stop": "17:55",
+		"speaker": "in Room 1",
+		"title": "Keynote & closing",
+		"subtitle": "Goodbye and thanks for all the fish"
 	},
 	{
 		"room": "room3",
